@@ -1,9 +1,13 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public abstract class Empleado extends Persona {
 
     private String codigoInterno;
     private String banco;
     private String numeroCuenta;
     private int mesAFacturar;
+    private List<Integer> mesesFacturados = new ArrayList<>();
 
     public Empleado(String nombre, String apellido, String identificacion, String celular,
                      String codigoInterno, String banco, String numeroCuenta, int mesAFacturar) {
@@ -15,6 +19,14 @@ public abstract class Empleado extends Persona {
     }
 
     public abstract double getPago(int numeroMes);
+
+    public boolean isMesFacturado(int numeroMes) {
+        return mesesFacturados.contains(numeroMes);
+    }
+
+    public void marcarMesFacturado(int numeroMes) {
+        mesesFacturados.add(numeroMes);
+    }
 
     public String getCodigoInterno() {
         return codigoInterno;
@@ -46,5 +58,13 @@ public abstract class Empleado extends Persona {
 
     public void setMesAFacturar(int mesAFacturar) {
         this.mesAFacturar = mesAFacturar;
+    }
+
+    public List<Integer> getMesesFacturados() {
+        return mesesFacturados;
+    }
+
+    public void setMesesFacturados(List<Integer> mesesFacturados) {
+        this.mesesFacturados = mesesFacturados;
     }
 }
