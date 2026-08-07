@@ -52,13 +52,13 @@ public class main {
         String identificacion = consola.pedirTexto("Identificacion: ");
         String celular = consola.pedirTexto("Celular: ");
         String codigoInterno = consola.pedirTexto("Codigo interno: ");
-        String banco = consola.pedirTexto("Banco: ");
-        String numeroCuenta = consola.pedirTexto("Numero de cuenta: ");
+        String banco = consola.pedirTextoOpcional("Banco: ");
+        String numeroCuenta = consola.pedirTextoOpcional("Numero de cuenta: ");
         int mesAFacturar = consola.pedirEntero("Mes a facturar: ");
-        String eps = consola.pedirTexto("EPS: ");
-        String fondoPension = consola.pedirTexto("Fondo de pension: ");
-        String fondoCesantias = consola.pedirTexto("Fondo de cesantias: ");
-        String arl = consola.pedirTexto("ARL: ");
+        String eps = consola.pedirTextoOpcional("EPS: ");
+        String fondoPension = consola.pedirTextoOpcional("Fondo de pension: ");
+        String fondoCesantias = consola.pedirTextoOpcional("Fondo de cesantias: ");
+        String arl = consola.pedirTextoOpcional("ARL: ");
         double salario = consola.pedirDecimal("Salario: ");
         int horasExtras = consola.pedirEntero("Horas extras: ");
 
@@ -73,8 +73,8 @@ public class main {
         String identificacion = consola.pedirTexto("Identificacion: ");
         String celular = consola.pedirTexto("Celular: ");
         String codigoInterno = consola.pedirTexto("Codigo interno: ");
-        String banco = consola.pedirTexto("Banco: ");
-        String numeroCuenta = consola.pedirTexto("Numero de cuenta: ");
+        String banco = consola.pedirTextoOpcional("Banco: ");
+        String numeroCuenta = consola.pedirTextoOpcional("Numero de cuenta: ");
         int mesAFacturar = consola.pedirEntero("Mes a facturar: ");
         int horasTrabajadas = consola.pedirEntero("Horas trabajadas: ");
         double valorHora = consola.pedirDecimal("Valor de la hora: ");

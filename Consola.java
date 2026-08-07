@@ -13,6 +13,12 @@ public class Consola {
         return sc.nextLine().trim();
     }
 
+    public String pedirTextoOpcional(String mensaje) {
+        System.out.print(mensaje + " (opcional, Enter para omitir): ");
+        String valor = sc.nextLine().trim();
+        return valor.isEmpty() ? "No registrado" : valor;
+    }
+
     public int pedirEntero(String mensaje) {
         while (true) {
             System.out.print(mensaje);
